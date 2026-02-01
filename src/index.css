@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-black text-white antialiased font-sans;
+}
+
+/* Landing page styles */
+.landing-page {
+  @apply bg-black text-white antialiased font-sans;
+}
+
+.landing-page ::selection {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Hide scrollbar for landing page */
+.landing-page::-webkit-scrollbar {
+  display: none;
+}
+
+.landing-page {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
