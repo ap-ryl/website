@@ -1,3 +1,5 @@
+import React from "react";
+
 // Pyramid: 3 rows — top (3), middle (5), bottom (7 faded)
 const ROW_TOP = [
   { name: "AWS", icon: AwsIcon, status: "supported" },
@@ -185,7 +187,7 @@ function IntegrationCard({
   item,
   faded,
 }: {
-  item: { name: string; icon: () => JSX.Element; status: string };
+  item: { name: string; icon: () => React.ReactNode; status: string };
   faded?: boolean;
 }) {
   return (
