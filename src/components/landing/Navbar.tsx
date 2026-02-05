@@ -2,10 +2,9 @@ import { Logo } from "./Logo";
 import type { NavItem } from "@/types/landing";
 
 const NAV_ITEMS: NavItem[] = [
-  { label: "Platform", href: "#" },
-  { label: "Integrations", href: "#" },
-  { label: "Changelog", href: "#" },
-  { label: "Documentation", href: "#" },
+  { label: "Integrations", href: "/#integrations" },
+  { label: "Pricing", href: "/#pricing" },
+  { label: "Documentation", href: "/docs" },
 ];
 
 interface NavbarProps {
@@ -23,12 +22,12 @@ export function Navbar({ isScrolled, onWaitlistClick }: NavbarProps) {
       }`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <a href="/" className="flex items-center gap-3 group cursor-pointer">
+        <a href="/" className="flex items-center gap-2 group cursor-pointer">
           <Logo
-            size={24}
+            size={20}
             className="text-white group-hover:rotate-12 transition-transform duration-500"
           />
-          <span className="text-lg font-bold tracking-tight">APRYL</span>
+          <span className="text-base font-semibold tracking-wide">APRYL</span>
         </a>
 
         <div className="hidden md:flex items-center gap-8">

@@ -1,7 +1,7 @@
 export function ConsoleSection() {
   return (
     <section className="px-6 pt-8 pb-24">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         {/* Terminal Window */}
         <div className="terminal bg-[#0c0c0c] border border-white/10 rounded-xl overflow-hidden shadow-2xl">
           {/* Terminal Header */}
@@ -14,7 +14,10 @@ export function ConsoleSection() {
             <span className="text-xs text-gray-500 font-mono">
               apryl — bash
             </span>
-            <div className="w-16" />
+            <span className="text-[10px] uppercase tracking-wider text-gray-500 bg-white/5 border border-white/10 px-2 py-0.5 rounded-full flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-yellow-500/80" />
+              Coming Soon
+            </span>
           </div>
 
           {/* Terminal Content */}
