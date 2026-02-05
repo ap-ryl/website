@@ -2,6 +2,10 @@ import { useEffect, useState, useRef } from "react";
 import { Navbar } from "@/components/landing/Navbar";
 import { HeroSection } from "@/components/landing/HeroSection";
 import { FeaturesSection } from "@/components/landing/FeaturesSection";
+import { PricingSection } from "@/components/landing/PricingSection";
+import { IntegrationsSection } from "@/components/landing/IntegrationsSection";
+
+import { LogoStrip } from "@/components/landing/LogoStrip";
 import { ConsoleSection } from "@/components/landing/ConsoleSection";
 import { Footer } from "@/components/landing/Footer";
 import { FloatingIcons } from "@/components/landing/FloatingIcons";
@@ -91,7 +95,10 @@ export function LandingPage() {
           onDemoClick={() => setIsVideoModalOpen(true)}
         />
         <ConsoleSection />
+        <LogoStrip />
         <FeaturesSection />
+        <IntegrationsSection />
+        <PricingSection onWaitlistClick={() => setIsWaitlistModalOpen(true)} />
       </main>
       <Footer />
 

@@ -1,21 +1,19 @@
+import { Link } from "react-router-dom";
 import { Logo } from "./Logo";
 
 const FOOTER_LINKS = {
   Product: [
     { label: "Features", href: "#" },
-    { label: "Integrations", href: "#" },
-    { label: "Pricing", href: "#" },
-    { label: "Changelog", href: "#" },
+    { label: "Integrations", href: "/#integrations" },
+    { label: "Pricing", href: "/#pricing" },
   ],
   Resources: [
-    { label: "Documentation", href: "#" },
-    { label: "API Reference", href: "#" },
+    { label: "Documentation", href: "/docs" },
     { label: "Guides", href: "#" },
-    { label: "Blog", href: "#" },
+    { label: "Blog", href: "/blog" },
   ],
   Company: [
     { label: "About", href: "#" },
-    { label: "Careers", href: "#" },
     { label: "Contact", href: "#" },
   ],
 };
@@ -62,19 +60,19 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-gray-600">
-            &copy; {new Date().getFullYear()} Apryl Technologies Inc. All rights
+            &copy; {new Date().getFullYear()} Apryl. All rights
             reserved.
           </p>
           <div className="flex gap-6 text-sm text-gray-600">
-            <a href="#" className="hover:text-white transition-colors">
+            <Link to="/privacy" className="hover:text-white transition-colors">
               Privacy
-            </a>
-            <a href="#" className="hover:text-white transition-colors">
+            </Link>
+            <Link to="/terms" className="hover:text-white transition-colors">
               Terms
-            </a>
-            <a href="#" className="hover:text-white transition-colors">
+            </Link>
+            <Link to="/security" className="hover:text-white transition-colors">
               Security
-            </a>
+            </Link>
           </div>
         </div>
       </div>

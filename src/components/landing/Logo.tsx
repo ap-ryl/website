@@ -14,7 +14,7 @@ export function Logo({ size = 24, className = "" }: LogoProps) {
       className={className}
     >
       <path
-        d="M12 3L4 21H9L12 15L15 21H20L12 3Z"
+        d="M12 4L4 20H9L12 14L15 20H20L12 4Z"
         fill="currentColor"
       />
     </svg>

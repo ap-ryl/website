@@ -1,5 +1,23 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Play } from "lucide-react";
+
+function useCounter(base: number) {
+  const [extra, setExtra] = useState(0);
+  const started = useRef(false);
+
+  useEffect(() => {
+    if (started.current) return;
+    started.current = true;
+
+    const timer = setInterval(() => {
+      setExtra((prev) => prev + 1);
+    }, 800);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  return (base + extra).toLocaleString();
+}
 
 const CYCLING_WORDS = [
   "modern infra.",
@@ -14,6 +32,7 @@ interface HeroSectionProps {
 }
 
 export function HeroSection({ onWaitlistClick, onDemoClick }: HeroSectionProps) {
+  const hoursSaved = useCounter(48500);
   const [wordIdx, setWordIdx] = useState(0);
   const [isChanging, setIsChanging] = useState(false);
 
@@ -60,11 +79,8 @@ export function HeroSection({ onWaitlistClick, onDemoClick }: HeroSectionProps) 
 
       {/* Subheadline */}
       <p className="mt-6 text-center text-gray-400 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-        Apryl is the AI-native workspace for DevOps teams.
-        <br className="hidden md:block" />
-        Build, ship, and manage production systems with the guidance of a
-        <br className="hidden md:block" />
-        senior engineer built directly into your workflow.
+        Your AI-native <span className="text-white font-medium">SRE, DevOps &amp; Platform Engineer</span> — all in one place.
+        Build, ship, and manage production systems with a senior engineer built into your workflow.
       </p>
 
       {/* CTA Buttons */}
@@ -83,6 +99,12 @@ export function HeroSection({ onWaitlistClick, onDemoClick }: HeroSectionProps) 
           Watch the demo
         </button>
       </div>
+
+      {/* Hours saved counter */}
+      <p className="mt-8 text-sm text-gray-500 tabular-nums">
+        Engineering hours saved and counting{" "}
+        <span className="text-white font-medium">{hoursSaved}+</span>
+      </p>
     </section>
   );
 }
