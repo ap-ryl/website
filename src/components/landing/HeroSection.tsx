@@ -20,10 +20,10 @@ function useCounter(base: number) {
 }
 
 const CYCLING_WORDS = [
-  "modern infra.",
-  "your cloud.",
-  "your stack.",
-  "DevOps teams.",
+  "SRE.",
+  "DevOps engineer.",
+  "platform team.",
+  "cloud architect.",
 ];
 
 interface HeroSectionProps {
@@ -61,7 +61,7 @@ export function HeroSection({ onWaitlistClick, onDemoClick }: HeroSectionProps) 
       {/* Main Headline */}
       <div className="text-center max-w-4xl mx-auto">
         <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-[1.1]">
-          <span className="text-white">The intelligence layer</span>
+          <span className="text-white">Your AI-powered</span>
           <br />
           <span className="relative inline-block h-[1.2em] overflow-hidden">
             <span
@@ -71,7 +71,7 @@ export function HeroSection({ onWaitlistClick, onDemoClick }: HeroSectionProps) 
                   : "translate-y-0 opacity-100"
               }`}
             >
-              for {CYCLING_WORDS[wordIdx]}
+              {CYCLING_WORDS[wordIdx]}
             </span>
           </span>
         </h1>
@@ -79,8 +79,8 @@ export function HeroSection({ onWaitlistClick, onDemoClick }: HeroSectionProps) 
 
       {/* Subheadline */}
       <p className="mt-6 text-center text-gray-400 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-        Your AI-native <span className="text-white font-medium">SRE, DevOps &amp; Platform Engineer</span> — all in one place.
-        Build, ship, and manage production systems with a senior engineer built into your workflow.
+        Stop waiting on <span className="text-white font-medium">SRE, DevOps &amp; Platform Engineering</span> bottlenecks.
+        Apryl's AI agent autonomously designs, deploys, and manages your production infrastructure.
       </p>
 
       {/* CTA Buttons */}

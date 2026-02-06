@@ -2,16 +2,16 @@ import { FeatureCard } from "./FeatureCard";
 
 export function FeaturesSection() {
   return (
-    <section className="px-6 py-32 bg-black">
+    <section id="features" className="px-6 py-32 bg-black">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Built for modern infrastructure
+            AI-first infrastructure management
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Everything you need to design, deploy, and manage cloud
-            infrastructure at scale.
+            Apryl's AI handles everything from architecture to cost
+            optimization — intelligently and autonomously.
           </p>
         </div>
 
@@ -25,17 +25,17 @@ export function FeaturesSection() {
           <FeatureCard
             category="Security"
             title="Zero Drift"
-            description="Real-time enforcement of compliance policies across AWS, Azure, and GCP simultaneously."
+            description="AI-enforced compliance policies across AWS, Azure, and GCP — detected and remediated in real time, without human intervention."
           />
           <FeatureCard
             category="Optimization"
             title="Agentic FinOps"
-            description="Intelligent resource rightsizing that cuts waste by an average of 42% on Day 1."
+            description="Apryl's AI agent continuously monitors your cloud spend, autonomously rightsizes resources, and eliminates waste — averaging 42% cost reduction from Day 1. No tickets, no approvals, no waiting."
           />
           <FeatureCard
             category="Observability"
             title="Causal Tracing"
-            description="Apryl maps the relationship between every microservice, identifying bottlenecks before they impact customers."
+            description="Apryl's AI maps every microservice relationship, autonomously identifying bottlenecks and root causes before they impact customers."
           />
         </div>
       </div>

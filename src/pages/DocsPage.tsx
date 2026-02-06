@@ -36,9 +36,16 @@ export function DocsPage() {
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
             Documentation
           </h1>
+
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-yellow-500/10 border border-yellow-500/20 mb-8">
+            <span className="w-2 h-2 rounded-full bg-yellow-500" />
+            <span className="text-sm text-yellow-400 font-medium">Coming Soon</span>
+          </div>
+
           <p className="text-gray-400 text-lg mb-10 leading-relaxed">
-            We're writing comprehensive guides, API references, and tutorials.
-            Join the waitlist to get early access when docs go live.
+            Comprehensive guides, API references, and tutorials for Apryl's
+            AI-powered infrastructure platform. We're building docs that help
+            you get the most out of autonomous cloud management.
           </p>
 
           <button
@@ -47,10 +54,6 @@ export function DocsPage() {
           >
             Join Waitlist for Early Access
           </button>
-
-          <p className="mt-12 text-sm text-gray-600">
-            Coming soon
-          </p>
         </div>
       </main>
 

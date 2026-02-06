@@ -18,8 +18,8 @@ const PLANS = [
   },
   {
     name: "Pro",
-    price: "$50",
-    originalPrice: "$80",
+    price: "$99",
+    originalPrice: "$150",
     period: "/mo",
     description: "For growing teams that need full control over their infrastructure workflows.",
     features: [
@@ -37,8 +37,8 @@ const PLANS = [
   },
   {
     name: "Enterprise",
-    price: "$500",
-    originalPrice: "$800",
+    price: "$799",
+    originalPrice: "$1000",
     period: "/mo",
     description: "For organizations with complex infrastructure and compliance requirements.",
     features: [

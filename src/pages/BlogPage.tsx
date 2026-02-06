@@ -36,13 +36,24 @@ export function BlogPage() {
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
             Blog
           </h1>
-          <p className="text-gray-400 text-lg mb-4 leading-relaxed">
-            No posts yet. We'll be sharing insights on AI-powered DevOps,
-            infrastructure automation, and engineering best practices.
+
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-yellow-500/10 border border-yellow-500/20 mb-8">
+            <span className="w-2 h-2 rounded-full bg-yellow-500" />
+            <span className="text-sm text-yellow-400 font-medium">Coming Soon</span>
+          </div>
+
+          <p className="text-gray-400 text-lg mb-10 leading-relaxed">
+            Insights on AI-powered infrastructure, autonomous cloud management,
+            and the future of DevOps. Stay tuned for deep dives, case studies,
+            and engineering best practices.
           </p>
-          <p className="text-gray-600 text-sm">
-            Check back soon.
-          </p>
+
+          <button
+            onClick={() => setIsWaitlistModalOpen(true)}
+            className="px-7 py-3 bg-white text-black rounded-lg font-medium text-sm hover:bg-gray-100 transition-colors"
+          >
+            Join Waitlist for Updates
+          </button>
         </div>
       </main>
 

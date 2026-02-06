@@ -3,13 +3,12 @@ import { Logo } from "./Logo";
 
 const FOOTER_LINKS = {
   Product: [
-    { label: "Features", href: "#" },
+    { label: "Features", href: "/#features" },
     { label: "Integrations", href: "/#integrations" },
     { label: "Pricing", href: "/#pricing" },
   ],
   Resources: [
     { label: "Documentation", href: "/docs" },
-    { label: "Guides", href: "#" },
     { label: "Blog", href: "/blog" },
   ],
   Company: [
