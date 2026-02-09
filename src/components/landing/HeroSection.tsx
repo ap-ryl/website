@@ -1,23 +1,5 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { ArrowRight } from "lucide-react";
-
-function useCounter(base: number) {
-  const [extra, setExtra] = useState(0);
-  const started = useRef(false);
-
-  useEffect(() => {
-    if (started.current) return;
-    started.current = true;
-
-    const timer = setInterval(() => {
-      setExtra((prev) => prev + 1);
-    }, 800);
-
-    return () => clearInterval(timer);
-  }, []);
-
-  return (base + extra).toLocaleString();
-}
 
 const CYCLING_WORDS = [
   "SRE.",
@@ -31,7 +13,6 @@ interface HeroSectionProps {
 }
 
 export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
-  const hoursSaved = useCounter(48500);
   const [wordIdx, setWordIdx] = useState(0);
   const [isChanging, setIsChanging] = useState(false);
 
@@ -93,11 +74,6 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
         </button>
       </div>
 
-      {/* Hours saved counter */}
-      <p className="mt-8 text-sm text-gray-500 tabular-nums">
-        Engineering hours saved and counting{" "}
-        <span className="text-white font-medium">{hoursSaved}+</span>
-      </p>
     </section>
   );
 }

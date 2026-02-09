@@ -36,7 +36,7 @@ export function VideoModal({ isOpen, onClose }: VideoModalProps) {
         <div className="relative w-full aspect-video bg-black rounded-xl overflow-hidden border border-white/10">
           <iframe
             key={openCount.current}
-            src={`https://www.youtube.com/embed/YxkGdX4WIBE?autoplay=1&mute=1&rel=0&playsinline=1&t=${openCount.current}`}
+            src={`https://www.youtube.com/embed/ZSsleVTkn14?autoplay=1&mute=1&rel=0&playsinline=1&t=${openCount.current}`}
             title="Apryl Demo"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen

@@ -96,7 +96,7 @@ export function LandingPage() {
           <div className="max-w-6xl mx-auto">
             <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-white/10 bg-black shadow-2xl shadow-white/5">
               <iframe
-                src="https://www.youtube.com/embed/YxkGdX4WIBE?autoplay=1&mute=1&loop=1&playlist=YxkGdX4WIBE&rel=0&playsinline=1"
+                src="https://www.youtube.com/embed/ZSsleVTkn14?autoplay=1&mute=1&loop=1&playlist=ZSsleVTkn14&rel=0&playsinline=1"
                 title="Apryl Demo"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
