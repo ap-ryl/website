@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Play } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 function useCounter(base: number) {
   const [extra, setExtra] = useState(0);
@@ -28,10 +28,9 @@ const CYCLING_WORDS = [
 
 interface HeroSectionProps {
   onWaitlistClick: () => void;
-  onDemoClick: () => void;
 }
 
-export function HeroSection({ onWaitlistClick, onDemoClick }: HeroSectionProps) {
+export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
   const hoursSaved = useCounter(48500);
   const [wordIdx, setWordIdx] = useState(0);
   const [isChanging, setIsChanging] = useState(false);
@@ -83,20 +82,14 @@ export function HeroSection({ onWaitlistClick, onDemoClick }: HeroSectionProps) 
         Apryl's AI agent autonomously designs, deploys, and manages your production infrastructure.
       </p>
 
-      {/* CTA Buttons */}
-      <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+      {/* CTA Button */}
+      <div className="mt-10">
         <button
           onClick={onWaitlistClick}
-          className="px-7 py-3 bg-white text-black rounded-lg font-medium text-sm hover:bg-gray-100 transition-colors"
+          className="px-10 py-3.5 bg-white text-black rounded-lg font-medium text-sm hover:bg-gray-100 transition-colors flex items-center gap-2"
         >
           Get early access
-        </button>
-        <button
-          onClick={onDemoClick}
-          className="px-7 py-3 bg-white/10 text-white rounded-lg font-medium text-sm hover:bg-white/20 transition-colors border border-white/10 flex items-center gap-2"
-        >
-          <Play className="h-4 w-4" />
-          Watch the demo
+          <ArrowRight className="h-4 w-4" />
         </button>
       </div>
 

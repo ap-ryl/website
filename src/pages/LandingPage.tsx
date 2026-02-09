@@ -6,17 +6,14 @@ import { PricingSection } from "@/components/landing/PricingSection";
 import { IntegrationsSection } from "@/components/landing/IntegrationsSection";
 
 import { LogoStrip } from "@/components/landing/LogoStrip";
-import { ConsoleSection } from "@/components/landing/ConsoleSection";
 import { Footer } from "@/components/landing/Footer";
 import { FloatingIcons } from "@/components/landing/FloatingIcons";
-import { VideoModal } from "@/components/landing/VideoModal";
 import { WaitlistModal } from "@/components/landing/WaitlistModal";
 import { iconList } from "@/components/landing/Icons";
 import type { FloatingIcon } from "@/types/landing";
 
 export function LandingPage() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
   const [isWaitlistModalOpen, setIsWaitlistModalOpen] = useState(false);
   const [floatingIcons, setFloatingIcons] = useState<FloatingIcon[]>([]);
   const lastPos = useRef({ x: 0, y: 0 });
@@ -32,7 +29,7 @@ export function LandingPage() {
 
   // Prevent body scroll when modal is open
   useEffect(() => {
-    if (isVideoModalOpen || isWaitlistModalOpen) {
+    if (isWaitlistModalOpen) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "";
@@ -40,10 +37,10 @@ export function LandingPage() {
     return () => {
       document.body.style.overflow = "";
     };
-  }, [isVideoModalOpen, isWaitlistModalOpen]);
+  }, [isWaitlistModalOpen]);
 
   const handleMouseMove = (e: React.MouseEvent) => {
-    if (isVideoModalOpen || isWaitlistModalOpen) return;
+    if (isWaitlistModalOpen) return;
 
     const { clientX, clientY } = e;
 
@@ -92,9 +89,22 @@ export function LandingPage() {
       <main className="relative z-20 pt-16">
         <HeroSection
           onWaitlistClick={() => setIsWaitlistModalOpen(true)}
-          onDemoClick={() => setIsVideoModalOpen(true)}
         />
-        <ConsoleSection />
+
+        {/* Inline Demo Video */}
+        <section id="demo" className="px-6 pt-8 pb-24">
+          <div className="max-w-6xl mx-auto">
+            <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-white/10 bg-black shadow-2xl shadow-white/5">
+              <iframe
+                src="https://www.youtube.com/embed/YxkGdX4WIBE?autoplay=1&mute=1&loop=1&playlist=YxkGdX4WIBE&rel=0&playsinline=1"
+                title="Apryl Demo"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="absolute inset-0 w-full h-full"
+              />
+            </div>
+          </div>
+        </section>
         <LogoStrip />
         <FeaturesSection />
         <IntegrationsSection />
@@ -103,10 +113,6 @@ export function LandingPage() {
       <Footer />
 
       {/* Modals */}
-      <VideoModal
-        isOpen={isVideoModalOpen}
-        onClose={() => setIsVideoModalOpen(false)}
-      />
       <WaitlistModal
         isOpen={isWaitlistModalOpen}
         onClose={() => setIsWaitlistModalOpen(false)}
